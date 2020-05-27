@@ -1,15 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-import './index.css';
+import './CSS/index.css';
+import Self from './intro.js';
 
-class Test extends React.Component {
-  render() {
-    return <h2> Hello World! </h2>
-  }
-}
-
-ReactDOM.render(<Test/>, document.getElementById('root'));
+ReactDOM.render(<Self />, document.getElementById('intro'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
