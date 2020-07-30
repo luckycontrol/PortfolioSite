@@ -1,5 +1,7 @@
 import React from 'react';
-import intro from './CSS/intro.css';
+//import intro from './CSS/intro.css';
+import me from './Images/me.PNG';
+import intro from './CSS/intro.module.css';
 
 class Self extends React.Component {
     constructor() {
@@ -8,7 +10,7 @@ class Self extends React.Component {
             name: 'Cho chong woon',
             age: '24',
             country: 'South Korea',
-            phone: '010-3591-8251',
+            phone: '02) 010-3591-8251',
             university: 'Korean Bible University',
             interest: 'IOS, DataScience, Web',
             skill: 'SwiftUI, React, Pandas',
@@ -18,17 +20,20 @@ class Self extends React.Component {
 
     render() {
         return (
-            <div className={intro.intro_welcome}>
+            <div>
                 <p style={{fontSize: '130px', height: '300px'}}> Welcome! </p>
 
                 <hr></hr>
 
-                <div style={{height: '600px'}} className={intro.intro_skills}>
-                    <p style={{fontSize: '50px'}}> <b>About Me</b> </p>
-                    <p> My Name is {this.state.name}, {this.state.age} old. </p>
-                    <p> I go to {this.state.university} </p>
-                    <p> Interested in {this.state.interest} </p>
-                    <p> My skills are {this.state.skill} </p>
+                <div className={intro.my_intro}>
+                    <img src={me} alt='Me!'></img>
+
+                    Name : {this.state.name} <br/>
+                    Age : {this.state.age} <br/>
+                    Country: {this.state.country} <br/>
+                    Phone: {this.state.country} <br/>
+                    Uni: {this.state.university} <br/>
+                    
                 </div>
 
                 <hr></hr>
