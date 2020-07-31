@@ -2,20 +2,31 @@ import React from 'react'
 import './Post.css'
 import Avatar from "@material-ui/core/Avatar"
 
-function Post() {
+interface PostProp {
+    username: string;
+    caption: string;
+    imageUrl: string;
+}
+
+function Post(props: { username: string, caption: string, imageUrl: string }) {
+    
     return (
         <div className="post">
-            <Avatar
-                className="post__avatar"
-                alt='종운'
-                src="/static/images/avatar1.jpg"
-            />
+
+            <div className="post__header">
+                <Avatar
+                    className="post__avatar"
+                    alt={props.username}
+                    src="/static/images/avatar1.jpg"
+                />
+                <h3> {props.username} </h3>
+            </div>
             
 
-            <img src="https://images.unsplash.com/photo-1596050776384-d4897eff9dff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" className="post__image"/>
+            <img src={props.imageUrl} alt="" className="post__image"/>
             
 
-            <h4 className="post__text"><strong>종운</strong> 인스타그램 클론이라니!!</h4>
+            <h4 className="post__text"><strong>{props.username}</strong> {props.caption}</h4>
         </div>
     )
 }
