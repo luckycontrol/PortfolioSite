@@ -11,18 +11,13 @@ interface Post {
 
 function App() {
 
-  var docRef = db.collection("posts").doc("test");
-  docRef.get().then(doc => {
-    console.log("데이터", doc.data());
-  })
-
   const [posts, setPosts] = useState<Post[]>([]);
 
-  // useEffect(() => {
-  //   db.collection('posts').onSnapshot(snapshot => {
-  //     setPosts(snapshot.docs.map(doc => doc.data() as Post ));
-  //   })
-  // }, []);
+  useEffect(() => {
+    db.collection('posts').onSnapshot(snapshot => {
+      setPosts(snapshot.docs.map(doc => doc.data() as Post ));
+    })
+  }, []);
 
   return (
     <div className="App">
