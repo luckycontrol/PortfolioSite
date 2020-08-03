@@ -2,13 +2,14 @@ import React from 'react'
 import './Post.css'
 import Avatar from "@material-ui/core/Avatar"
 
-interface PostProp {
+interface Post {
+    id: string;
     username: string;
     caption: string;
     imageUrl: string;
 }
 
-function Post(props: { username: string, caption: string, imageUrl: string }) {
+function Post(props: Post) {
     
     return (
         <div className="post">

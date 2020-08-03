@@ -12,3 +12,15 @@
   border-bottom: 1px solid lightgray;
   object-fit: contain;
 }
+
+.app__signUp {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__signIn {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
